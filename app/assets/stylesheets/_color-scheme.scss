@@ -1,0 +1,68 @@
+@import 'compass';
+
+/* ===================== SASS Mixins ===================== */
+
+$green: #00D861;
+$blue: #03A9F4;
+$light-blue: lighten($blue, 45%);
+$charcoal: #4C4C4C;
+$gray: #BFBFBF;
+
+
+/* ===================== Textual Color ===================== */
+
+.white, .white * {
+    color: white;
+}
+.gray, .gray * {
+    color: $gray;
+}
+.blue, .blue * {
+    color: $blue !important;
+}
+
+
+/* ===================== Background Colors ===================== */
+
+.background-blue {
+    background-color: $blue;
+}
+
+.background-light-blue {
+    background-color: $light-blue;
+}
+
+.background-white {
+    background-color: white;
+}
+
+.background-gray {
+    background-color: $gray;
+}
+
+.background-green {
+    background-color: $green;
+}
+
+.background-blue-green-gardient-right-diagnol {
+    @include filter-gradient(#45b8ed, #22ec7d, horizontal);
+    @include background-image(linear-gradient(left top, #45b8ed 0%, #22ec7d 66%, #22ec7d 100%));
+}
+
+
+/* ===================== Border Colors ===================== */
+
+.border-gray-1 {
+    border: 1px solid $gray;
+}
+
+.border-blue-1 {
+    border: 1px solid $blue;
+}
+.border-top-blue-1 {
+    border-top: 1px solid $blue;
+}
+
+.border-top-red-1 {
+    border-top: 1px solid red;
+}

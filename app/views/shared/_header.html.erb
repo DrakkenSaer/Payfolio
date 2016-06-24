@@ -1,0 +1,57 @@
+<header class="background-white">
+    <nav class="navbar navbar-default no-background no-border-radius no-border">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed buffer-margin-medium" data-toggle="collapse" data-target="#toggle-navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <%= link_to image_tag("logo.png"), root_path, class: "navbar-brand" %>
+            </div>
+            <div class="collapse navbar-collapse blue" id="toggle-navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="buffer-padding-small"><%= link_to "Home", root_path %></li>
+                    <li class="buffer-padding-small"><%= link_to "About", about_path %></li>
+                    <li class="buffer-padding-small"><%= link_to "Upgrade", "#" %></li>
+                    <li class="buffer-padding-small"><%= link_to "Account", "#" %></li>
+                    <li>
+                        <%= link_to raw("<image src='' width='50' height='50' class='border-blue-1 img-circle'> <span class='caret'></span>"), "#", "data-toggle": "dropdown", role: "button", "aria-haspopup": "true", "aria-expanded": "false" %>
+                        <ul class="dropdown-menu">
+                            <li class="buffer-padding-small"><%= link_to "Logout", "#" %></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-fluid background-blue border-shadow-inner-top">
+            <ul class="list-unstyled list-inline white center-block text-uppercase text-center text-decoration-none no-margin" id="header-secondary-navbar">
+                <li class="buffer-margin-extra-small">
+                    <%= link_to raw("<i class='glyphicon glyphicon-home buffer-margin-extra-small-horizontal'></i> Dashboard"), "#" %>
+                </li>
+                <li class="buffer-margin-extra-small">
+                    <%= link_to icon("credit-card", class: "buffer-margin-extra-small-horizontal") + "Wallet", "#" %>
+                </li>
+                <li class="buffer-margin-extra-small">
+                    <%= link_to icon("envelope", class: "buffer-margin-extra-small-horizontal") + "Messages", "#" %>
+                </li>
+                <li class="buffer-margin-extra-small">
+                    <%= link_to icon("shopping-cart", class: "buffer-margin-extra-small-horizontal") + "Sales", "#" %>
+                </li>
+                <li class="buffer-margin-extra-small">
+                    <%= link_to icon("credit-card", class: "buffer-margin-extra-small-horizontal") + "Wallet", "#" %>
+                </li>
+                <li class="buffer-margin-extra-small">
+                    <%= link_to icon("folder", class: "buffer-margin-extra-small-horizontal") + "Projects", "#" %>
+                </li>
+                <li class="buffer-margin-extra-small">
+                    <%= link_to raw("<i class='glyphicon glyphicon-user buffer-margin-extra-small-horizontal'></i> Dashboard"), "#" %>
+                </li>
+                <li class="buffer-margin-extra-small">
+                    <%= link_to icon("user-plus", class: "buffer-margin-extra-small-horizontal") + "New Client", "#" %>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

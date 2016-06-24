@@ -1,0 +1,54 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "compass";
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+@import "color-scheme";
+@import "global-helpers";
+
+///////////// migrate when you can figured out how to not include underscored files in pipeline
+
+.background-light-gray {
+    background: $gray-lighter;
+}
+
+.triangle-bottom-light-blue-20 {
+  @include bordered-triangle(20px, 0, $light-blue, 0, down);
+}
+
+/* ===================== Universal ===================== */
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+}
+
+/* Form CSS */
+
+textarea { resize: vertical; }
+
+/* layout CSS */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  
+  @extend .background-light-gray;
+}
+
+/* Header CSS */
+
+#header-secondary-navbar {
+  li { width: 150px; }
+}
+
+/* Freelance Dashboard */
+
+.dashboard-box-shadow { @include box-shadow(0 3px 10px -3px rgba(0,0,0,0.4)); }
