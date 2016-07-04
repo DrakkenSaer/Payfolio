@@ -1,11 +1,18 @@
 Rails.application.routes.draw do
   root to: "pages#show", page: "home"
+
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', registration: 'register', sign_up: 'signup' }, :controllers => { registrations: 'registrations' }
+  
+  resources :freelancers
+  resources :clients
+  resources :admins
+  resources :projects
+  
+  get 'dashboard' => 'users#dashboard', as: :dashboard
   
   match "about", to: "pages#show", page: "about", via: :get
   match "contact", to: "pages#show", page: "contact", via: :get
   match "faq", to: "pages#show", page: "faq", via: :get
-
-  devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

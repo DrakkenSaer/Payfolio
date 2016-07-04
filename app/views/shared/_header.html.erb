@@ -14,21 +14,31 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="buffer-padding-small"><%= link_to "Home", root_path %></li>
                     <li class="buffer-padding-small"><%= link_to "About", about_path %></li>
+
+                    <% if user_signed_in? %>
+
                     <li class="buffer-padding-small"><%= link_to "Upgrade", "#" %></li>
                     <li class="buffer-padding-small"><%= link_to "Account", "#" %></li>
                     <li>
                         <%= link_to raw("<image src='' width='50' height='50' class='border-blue-1 img-circle'> <span class='caret'></span>"), "#", "data-toggle": "dropdown", role: "button", "aria-haspopup": "true", "aria-expanded": "false" %>
                         <ul class="dropdown-menu">
-                            <li class="buffer-padding-small"><%= link_to "Logout", "#" %></li>
+                            <li class="buffer-padding-small"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
                         </ul>
                     </li>
+                    
+                    <% else %>
+
+                    <li class="buffer-padding-small"><%= link_to "Sign up", new_user_registration_path %></li>
+                    <li class="buffer-padding-small"><%= link_to "Login", new_user_session_path %></li>
+
+                    <% end %>
                 </ul>
             </div>
         </div>
         <div class="container-fluid background-blue border-shadow-inner-top">
             <ul class="list-unstyled list-inline white center-block text-uppercase text-center text-decoration-none no-margin" id="header-secondary-navbar">
                 <li class="buffer-margin-extra-small">
-                    <%= link_to raw("<i class='glyphicon glyphicon-home buffer-margin-extra-small-horizontal'></i> Dashboard"), "#" %>
+                    <%= link_to raw("<i class='glyphicon glyphicon-home buffer-margin-extra-small-horizontal'></i> Dashboard"), dashboard_path %>
                 </li>
                 <li class="buffer-margin-extra-small">
                     <%= link_to icon("credit-card", class: "buffer-margin-extra-small-horizontal") + "Wallet", "#" %>
@@ -43,13 +53,13 @@
                     <%= link_to icon("credit-card", class: "buffer-margin-extra-small-horizontal") + "Wallet", "#" %>
                 </li>
                 <li class="buffer-margin-extra-small">
-                    <%= link_to icon("folder", class: "buffer-margin-extra-small-horizontal") + "Projects", "#" %>
+                    <%= link_to icon("folder", class: "buffer-margin-extra-small-horizontal") + "Projects", projects_path %>
                 </li>
                 <li class="buffer-margin-extra-small">
-                    <%= link_to raw("<i class='glyphicon glyphicon-user buffer-margin-extra-small-horizontal'></i> Dashboard"), "#" %>
+                    <%= link_to raw("<i class='glyphicon glyphicon-user buffer-margin-extra-small-horizontal'></i> Clients"), clients_path %>
                 </li>
                 <li class="buffer-margin-extra-small">
-                    <%= link_to icon("user-plus", class: "buffer-margin-extra-small-horizontal") + "New Client", "#" %>
+                    <%= link_to icon("user-plus", class: "buffer-margin-extra-small-horizontal") + "New Client", new_client_path %>
                 </li>
             </ul>
         </div>

@@ -7,6 +7,7 @@ $blue: #03A9F4;
 $light-blue: lighten($blue, 45%);
 $charcoal: #4C4C4C;
 $gray: #BFBFBF;
+$purple: purple;
 
 
 /* ===================== Textual Color ===================== */
@@ -19,6 +20,9 @@ $gray: #BFBFBF;
 }
 .blue, .blue * {
     color: $blue !important;
+}
+.green, .green * {
+    color: $green !important;
 }
 
 
@@ -55,6 +59,9 @@ $gray: #BFBFBF;
 .border-gray-1 {
     border: 1px solid $gray;
 }
+.border-right-gray-1 {
+    border-right: 1px solid $gray;
+}
 
 .border-blue-1 {
     border: 1px solid $blue;
@@ -63,6 +70,25 @@ $gray: #BFBFBF;
     border-top: 1px solid $blue;
 }
 
+.border-top-purple-1 {
+    border-top: 1px solid $purple;
+}
+
+.border-top-green-1 {
+    border-top: 1px solid $green;
+}
+
 .border-top-red-1 {
     border-top: 1px solid red;
 }
+
+.list-blue {
+	&> li:before {
+		color: $blue;
+	}
+}
+
+/* ================ Bootstrap Overrides ================ */
+
+.btn-success { background-color: $green; border-color: shade($green, 10%); }
+.btn-success:hover { background-color: shade($green, 10%); border-color: shade($green, 20%); }

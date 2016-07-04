@@ -10,7 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'font-awesome-sass', '~> 4.6.2'
-
+gem "bower-rails", "~> 0.10.0"
 
 gem 'compass-rails'
 # https://github.com/Compass/compass/pull/2088

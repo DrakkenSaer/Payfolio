@@ -11,7 +11,11 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap
 //= require jquery_ujs
+//= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+
+// Bower packages
+//= require bootstrap-datepicker/dist/js/bootstrap-datepicker

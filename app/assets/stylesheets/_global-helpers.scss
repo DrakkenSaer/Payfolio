@@ -79,6 +79,18 @@
 
 .text-decoration-none, .text-decoration-none * { text-decoration: none !important; }
 
+.font-size-230 {
+	font-size: 230%;
+}
+.font-size-200 {
+	font-size: 200%;
+}
+.font-size-190 {
+	font-size: 190%;
+}
+.font-size-180 {
+	font-size: 180%;
+}
 .font-size-120 {
 	font-size: 120%;
 }
@@ -87,6 +99,9 @@
 }
 .font-size-70 {
 	font-size: 70%;
+}
+.font-size-60 {
+	font-size: 60%;
 }
 
 
@@ -98,7 +113,7 @@
 .no-border-bottom { border-bottom: none; }
 .no-border-right { border-right: none; }
 .no-border-left { border-left: none; }
-.no-border { border: none; }
+.no-border, .no-border * { border: none !important; }
 .border-radius-10 { @include border-radius(10px); }
 .border-radius-5 { @include border-radius(5px); }
 .border-radius-2 { @include border-radius(2px); }
@@ -206,7 +221,7 @@
 	margin-right: 0.25em;
 }
 
-.no-padding { padding: 0; }
+.no-padding { padding: 0 !important; }
 .no-padding-left { padding-left: 0; }
 .no-padding-right { padding-right: 0; }
 .no-padding-top { padding-top: 0; }
@@ -226,6 +241,17 @@
 	list-style-type: none;
 	
 	&> li:before {
-		content: "- ";
+		content: "-";
+		margin: 0 5px 0 -20px;
+	}
+}
+
+.list-circle-o {    
+	list-style-type: none;
+	
+	&> li:before {
+		font-family: 'FontAwesome';
+		content: '\f10c';
+		margin: 0 5px 0 -20px;
 	}
 }
