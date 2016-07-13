@@ -11,15 +11,3 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 # Precompile *all* assets, except those that start with underscore
-Rails.application.config.assets.precompile << Proc.new { |path|
-    blacklist = [
-        /[^_]*/
-    ]
-    full_path = Rails.application.assets.resolve(path)#.to_path
-
-    if (path =~ /(^[^_\/]|\/[^_])[^\/]*$/) and (path !~ Regexp.union(blacklist) )
-        true
-    else
-        false
-    end
-}
