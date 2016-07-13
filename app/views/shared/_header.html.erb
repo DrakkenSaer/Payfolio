@@ -20,7 +20,7 @@
                     <li class="buffer-padding-small"><%= link_to "Upgrade", "#" %></li>
                     <li class="buffer-padding-small"><%= link_to "Account", "#" %></li>
                     <li>
-                        <%= link_to raw("<image src='' width='50' height='50' class='border-blue-1 img-circle'> <span class='caret'></span>"), "#", "data-toggle": "dropdown", role: "button", "aria-haspopup": "true", "aria-expanded": "false" %>
+                        <%= link_to raw("#{current_user.username} <image src='' width='50' height='50' class='border-blue-1 img-circle'> <span class='caret'></span>"), "#", "data-toggle": "dropdown", role: "button", "aria-haspopup": "true", "aria-expanded": "false" %>
                         <ul class="dropdown-menu">
                             <li class="buffer-padding-small"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
                         </ul>
