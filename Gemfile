@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.3.0"
 
 gem 'rails', '4.2.5'
 gem 'sass-rails', '~> 5.0'
@@ -10,6 +10,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'font-awesome-sass', '~> 4.6.2'
+
+# Use Puma as default server
+gem 'puma'
+# User Rack Timeout to tell Puma when to timeout requests
+gem "rack-timeout"
 
 gem 'compass-rails'
 # https://github.com/Compass/compass/pull/2088
@@ -40,7 +45,6 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-  gem 'unicorn'
 end
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
