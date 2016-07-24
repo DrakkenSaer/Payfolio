@@ -13,8 +13,6 @@ gem 'font-awesome-sass', '~> 4.6.2'
 
 # Use Puma as default server
 gem 'puma'
-# User Rack Timeout to tell Puma when to timeout requests
-gem "rack-timeout"
 
 gem 'compass-rails'
 # https://github.com/Compass/compass/pull/2088
@@ -43,6 +41,9 @@ group :doc do
 end
 
 group :production do
+  # User Rack Timeout to tell Puma when to timeout requests
+  gem "rack-timeout"
+
   gem 'pg'
   gem 'rails_12factor'
 end

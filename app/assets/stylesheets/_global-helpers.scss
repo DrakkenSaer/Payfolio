@@ -113,7 +113,7 @@
 .no-border-bottom { border-bottom: none; }
 .no-border-right { border-right: none; }
 .no-border-left { border-left: none; }
-.no-border, .no-border * { border: none !important; }
+.no-border { border: none !important; }
 .border-radius-10 { @include border-radius(10px); }
 .border-radius-5 { @include border-radius(5px); }
 .border-radius-2 { @include border-radius(2px); }
